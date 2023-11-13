@@ -4967,6 +4967,27 @@ A multipurpose object used by several endpoints
 + Response 200 (application/json; charset=utf-8)
 + Attributes (DocumentDetails)
 
+## DocumentDetailsPayableOnAccount [/DocumentDetailsPayableOnAccount]
+Object used by PayableOnAccount
+### DocumentDetails [GET]
+
+
+|Property|Description|Type|Max Length|Notes|Constraint|
+|--------|-----------|----|----------|-----|----------|
+|DocumentDate|Document Date|`datetime`|20||Required|
+|ValueDate|Value Date|`datetime`|20||Required|
+|DocumentCurrencyCode|Document Currency|`string`|3||Required|
+|InvoiceCurrencyCode|Invoice Currency Code|`string`|3|||
+|FunctionalCurrencyCode|Functional Currency Code|`string`|3|||
+|PayeeName|Payee Name|`string`|60|||
+|Narrative|Narrative|`string`|30|||
+|EDICode|Document EDI Code|`string`|25|||
+|AlternateClientCode|Alternate Client Code|`string`|10|||
+
+
++ Response 200 (application/json; charset=utf-8)
++ Attributes (DocumentDetails)
+
 ## Functional Currency [/FunctionalCurrency]
 A multipurpose object used by several endpoints
 ### FunctionalCurrency [GET]
@@ -5813,6 +5834,17 @@ The CommodityFullCode is a five part key made up of the following values seperat
 + Narrative: Bacs 28/07/15 (string)
 + EDICode: abc123 (string)
 
+## DocumentDetailsPayableOnAccount (object)
++ DocumentDate: `2015-07-01T00:00:00Z` (required, string)
++ ValueDate: `2015-08-01T00:00:00Z` (required, string)
++ DocumentCurrencyCode: GBP (required, string)
++ InvoiceCurrencyCode: EUR (string)
++ FunctionalCurrencyCode: USD (string)
++ PayeeName: Test Client Ltd (string)
++ Narrative: Bacs 28/07/15 (string)
++ EDICode: abc123 (string)
++ AlternateClientCode: TESTCLI2.P (string)
+
 ## DocumentStatus (object)
 + DocumentStatusId: L (string)
 + DocumentStatusDescription: Locked (string)
@@ -6145,7 +6177,7 @@ The CommodityFullCode is a five part key made up of the following values seperat
 + AccountDetails (required, array [AccountPostingBankPayDetails, AccountPostingRecDetails])
 
 ## PayableOnAccount (object)
-+ DocumentBody (required, DocumentDetailsOnAccount)
++ DocumentBody (required, DocumentDetailsPayableOnAccount)
 + BankDetails (required, AccountPostingBankPayOnAccountDetails)
 + TransactionsToMatch (required, array [OnAccountPayDetailsLess])
 + OtherCosts (array [AccountPostingPayDetailsLess])
