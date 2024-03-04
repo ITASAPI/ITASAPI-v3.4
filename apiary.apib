@@ -1,8 +1,8 @@
 FORMAT: 1A
 HOST: http://itas.apiary.io/
-VERSION: 3.1
+VERSION: 3.2
 
-# ITAS API 3.1
+# ITAS API 3.2
 
 
 ## Disclaimer
@@ -10,7 +10,7 @@ VERSION: 3.1
 **** Warning: at this point, ITAS API does not support asynchronous or multithreading calls for POST, PUT, PATCH and DELETE requests. Async or multithreading requests could result in various Error messages, or even a corruption of data in extreme cases and are therefore not supported. ****
 <br />
 <br />
-<strong>Release notes</strong> (<sup>5th</sup> February 2024.)
+<strong>Release notes</strong> (<sup>5th</sup> March 2024.)
 
 ## New Endpoints
 
@@ -21,7 +21,10 @@ VERSION: 3.1
 ## Updated Endpoints
 
 <ul>
-<li>Finance-Cash <b>Create PayableOnAccount</b>: Additional Property AlternateClientCode,<a href="/#reference/finance-cash/payableonaccount"> Link</a></li>
+<li>Accounting-Transaction <b>List Transaction Header</b>: Additional Property ChartOfAccountsType,<a href="/#reference/accounting-transactions/transaction-header-list"> Link</a></li>
+<li>Accounting-Transaction <b>Read Transaction Header</b>: Additional Property ChartOfAccountsType,<a href="/#reference/accounting-transactions/read-transaction-header"> Link</a></li>
+<li>Accounting-Transaction <b>Update Transaction Header</b>: Additional Property ChartOfAccountsType,<a href="/#reference/accounting-transactions/update-transaction-header"> Link</a></li>
+<li>Accounting-Transaction <b>Delta Update Transaction Header</b>: Additional Property ChartOfAccountsType,<a href="/#reference/accounting-transactions/delta-update-transaction-header"> Link</a></li>
 </ul>
 <chandiv>** ends ** </div>
 
@@ -2812,6 +2815,7 @@ None.
 |DocumentReversed|Document Reversed Reference|`string`|9|||
 |AssociateDocument|Associate Document Reference|`string`|9|||
 |DocumentStatusCode|Document Status Code|`string`|1|||
+|ChartOfAccountsType|Chart Of Accounts Type|`string`|25|||
 
 + Request
     [AccessToken][]
@@ -2857,6 +2861,7 @@ None.
 |DocumentReversed|Document Reversed Reference|`string`|9|||
 |AssociateDocument|Associate Document Reference|`string`|9|||
 |DocumentStatus|see <b><a href="/#reference/global-reference-data/document-status-list/list-document-statuses">Document Status List</a></b> endpoint|`object`||||
+|ChartOfAccountsType|Chart Of Accounts Type|`string`|25|||
 
 + Request
     [AccessToken][]
@@ -2890,6 +2895,7 @@ None.
 |EDICode|Transaction EDI Code|`string`|100|||
 |InterfaceStatus|Transaction Interface Status|`string`|1|||
 |DocumentStatusCode|Document Status Code|`string`|1|||
+|ChartOfAccountsType|Chart Of Accounts Type|`string`|25|||
 
 + Request (application/json)
     + Header
@@ -2927,6 +2933,7 @@ None.
 |EDICode|Transaction EDI Code|`string`|100|||
 |InterfaceStatus|Transaction Interface Status|`string`|1|||
 |DocumentStatusCode|Document Status Code|`string`|1|||
+|ChartOfAccountsType|Chart Of Accounts Type|`string`|25|||
 
 + Request (application/json)
     + Header
@@ -6614,18 +6621,21 @@ The CommodityFullCode is a five part key made up of the following values seperat
 + DocumentReversed: PI1600011 (string)
 + AssociateDocument: PI1600012 (string)
 + DocumentStatus (DocumentStatus)
++ ChartOfAccountsType: V (string)
 
 ## TransactionHeaderUpdate (object)
 + DocumentReference: CN1600001 (required, string)
 + EDICode: 123abc (string)
 + InterfaceStatus: Y (string)
 + DocumentStatusCode: L (string)
++ ChartOfAccountsType: V (string)
 
 ## TransactionHeaderDelta (object)
 + DocumentReference: CN1600001 (required, string)
 + EDICode: 123abc (string)
 + InterfaceStatus: Y (string)
 + DocumentStatusCode: L (string)
++ ChartOfAccountsType: V (string)
 
 ## TransactionHeader List (object)
 + PostedDate: `2015-07-01T00:00:00Z` (string)
@@ -6636,6 +6646,7 @@ The CommodityFullCode is a five part key made up of the following values seperat
 + DocumentReversed: PI1600011 (string)
 + AssociateDocument: PI1600012 (string)
 + DocumentStatusCode: L (string)
++ ChartOfAccountsType: V (string)
 
 ## TransactionsMatched (object)
 + MatchFlag: ABC123 (string)
