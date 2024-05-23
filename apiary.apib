@@ -3513,6 +3513,7 @@ Endpoints covering reading data associated with Physical Contracts (trades)
 |Property|Description|Type|Max Length|Notes|Constraint|
 |--------|-----------|----|----------|-----|----------|
 |Key20|Documentary Credit Number|`string`|25||Required|
+|CurrencyCode|Currency Code|`string`|3||Required|
 |Key23|Reference to Pre Advice|`string`|4000|||
 |Key31C|Date of Issue|`string`|20|||
 |Key31D|Date and Place of Expiry|`string`|4000|||
@@ -6151,6 +6152,7 @@ The CommodityFullCode is a five part key made up of the following values seperat
 
 ## LetterOfCredit (object)
 + Key20: 134323239974 (string)
++ CurrencyCode: GBP (string)
 + Key23: 74992323431 (string)
 + Key31C: 231122 (string)
 + Key31D: 240127IN USA (string)
