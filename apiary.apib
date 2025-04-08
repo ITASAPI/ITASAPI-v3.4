@@ -1268,7 +1268,7 @@ Codes relating to Physicals Trading and related endpoints.
 ## Code Reference Create and Update [/ReferenceData/{TradingEntityId}/Physicals/CodeRename/{Property}]
 
 `PUT` Create new code, then update references . * <a href="/#introduction/disclaimer"> (Disclaimer)</a>
-### Create Then Update Codes [PUT]
+### Create and Update Code References [PUT]
 
 |Property|Description|Type|Max Length|Notes|Constraint|
 |--------|-----------|----|----------|-----|----------|
@@ -1295,7 +1295,6 @@ Codes relating to Physicals Trading and related endpoints.
         + Data
             + NewValue: `CAN||INDIA||GMP||EXP||ABC` (string)
         + Response (201 CreateResponse)
-        + Messages (array [201 ErrorMessageDetail])
     
 + Response 400 (application/json; charset=utf-8)
     + Attributes (400 Response)
