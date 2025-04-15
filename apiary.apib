@@ -3972,6 +3972,91 @@ None.
 # Group Global Market Data
 Global (system-wide) Market Data
 
+## Alternate Exchange Rate [/MarketData/Global/AlternateExchangeRate/{CurrencyId}]
+`PUT` Create Alternate Exchange Rate.
+### Create Alternate Exchange Rate [PUT]
+
+<b>Request Body</b>
+|Property|Description|Type|Max Length|Notes|Constraint|
+|--------|-----------|----|----------|-----|----------|
+|CurrencyId|Currency ID|`string`|3||Required|
+|RateDate|Rate Date|`Date`|||Required|
+|RateName|Rate Name|`string`|30||Required|
+|RateType|Rate Type|`string`|1|`D` or `M`|Required|
+|Rate|Rate|`decimal`||||
+|OneMonthPointsMovement|One Month Points Movement|`decimal`||||
+|TwoMonthPointsMovement|Two Month Points Movement|`decimal`||||
+|ThreeMonthPointsMovement|Three Month Points Movement|`decimal`||||
+|FourMonthPointsMovement|Four Month Points Movement|`decimal`||||
+|FiveMonthPointsMovement|Five Month Points Movement|`decimal`||||
+|SixMonthPointsMovement|Six Month Points Movement|`decimal`||||
+|SevenMonthPointsMovement|Seven Month Points Movement|`decimal`||||
+|EightMonthPointsMovement|Eight Month Points Movement|`decimal`||||
+|NineMonthPointsMovement|Nine Month Points Movement|`decimal`||||
+|TenMonthPointsMovement|Ten Month Points Movement|`decimal`||||
+|ElevenMonthPointsMovement|Eleven Month Points Movement|`decimal`||||
+|OneYearPointsMovement|One Year Points Movement|`decimal`||||
+|ThirteenMonthPointsMovement|One Month Points Movement|`decimal`||||
+|FourteenMonthPointsMovement|One Month Points Movement|`decimal`||||
+|FifteenMonthPointsMovement|One Month Points Movement|`decimal`||||
+|SixteenMonthPointsMovement|One Month Points Movement|`decimal`||||
+|SeventeenMonthPointsMovement|One Month Points Movement|`decimal`||||
+|EighteenMonthPointsMovement|One Month Points Movement|`decimal`||||
+|NineteenMonthPointsMovement|One Month Points Movement|`decimal`||||
+|TwentyMonthPointsMovement|One Month Points Movement|`decimal`||||
+|TwentyOneMonthPointsMovement|One Month Points Movement|`decimal`||||
+|TwentyTwoMonthPointsMovement|One Month Points Movement|`decimal`||||
+|TwentyThreeMonthPointsMovement|One Month Points Movement|`decimal`||||
+|TwoYearPointsMovement|Two Year Points Movement|`decimal`||||
+|ThreeYearPointsMovement|Three Year Points Movement|`decimal`||||
+|FourYearPointsMovement|Four Year Points Movement|`decimal`||||
+|FiveYearPointsMovement|Five Year Points Movement|`decimal`||||
+
+<hr />
+
+<b>Response Data</b>
+|Property|Description|Type|Max Length|Notes|Constraint|
+|--------|-----------|----|----------|-----|----------|
+|CurrencyId|Currency Id|`string`||||
+|RateDate|Rate Date|`Date`||||
+|RateName|Rate Name|`string`||||
+
++ Parameters
+    + CurrencyId (required, string, `GBP`)
+
++ Request (application/json)
+    + Header
+
+            AccessToken: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1bmlxdWVfbmFtZSI6ImRlZXBhayIsInN1YiI6ImRlZXBhayIsInJvbGUiOlsiNzk5YjhhNDEtYWI0ZS00MTBhLWI5MTktYzU3ZWFlMmFlMDI5IiwiZGVlcGFrIiwiQVNQLk5FVCBJZGVudGl0eSIsIjViNDE4ODE2LTI3ZjQtNGRlOC1iNmMyLTJlZTcxNjI3ZmJmYyIsIkFkbWluIiwiU3VwZXJBZG1pbiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMjciLCJhdWQiOiI4MjkzNjk0MjJmNzA0NTIzODUxZDk4NTU2YjZkNTQyYiIsImV4cCI6MTQ1OTQzMjk0MSwibmJmIjoxNDU5NDMxMTQxfQ.JgPGxt0Ok5baKx0YMXlO6D9kUYrCWM-Kma9b9iMW8tg
+
+    + Attributes (ExchangeRate)
+
++ Response 201 (application/json; charset=utf-8)
+    + Attributes
+        + Data
+            + CurrencyId: GBP (string)
+            + RateDate: `2021-11-08` (string)
+            + RateName: PTAX (string)
+        + Response (201 CreateResponse)
+        + Messages (array [201 ErrorBllMessageDetail])
+
++ Response 200 (application/json; charset=utf-8)
+    + Attributes  
+        + Data 
+            + CurrencyId: GBP (string)
+            + RateDate: `2021-11` (string)
+            + RateName: PTAX (string)
+        + Response (200 UpdateResponse)
+
++ Response 400 (application/json; charset=utf-8)
+    + Attributes (400 Response)
+
++ Response 404 (application/json; charset=utf-8)
+    + Attributes (404 Response)
+
++ Response 405 (application/json; charset=utf-8)
+    + Attributes (405 Response)
+
 ## Exchange Rate [/MarketData/Global/ExchangeRate/{CurrencyId}]
 `PUT` Create Exchange Rate.
 ### Create Exchange Rate [PUT]
