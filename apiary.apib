@@ -3981,7 +3981,7 @@ Global (system-wide) Market Data
 |--------|-----------|----|----------|-----|----------|
 |CurrencyId|Currency ID|`string`|3||Required|
 |RateDate|Rate Date|`Date`|||Required|
-|RateName|Rate Name|`string`|30||Required|
+|RateDescription|Rate Description|`string`|30||Required|
 |RateType|Rate Type|`string`|1|`D` or `M`|Required|
 |Rate|Rate|`decimal`||||
 |OneMonthPointsMovement|One Month Points Movement|`decimal`||||
@@ -4019,7 +4019,7 @@ Global (system-wide) Market Data
 |--------|-----------|----|----------|-----|----------|
 |CurrencyId|Currency Id|`string`||||
 |RateDate|Rate Date|`Date`||||
-|RateName|Rate Name|`string`||||
+|RateDescription|Rate Description|`string`||||
 
 + Parameters
     + CurrencyId (required, string, `GBP`)
@@ -4036,7 +4036,7 @@ Global (system-wide) Market Data
         + Data
             + CurrencyId: GBP (string)
             + RateDate: `2021-11-08` (string)
-            + RateName: PTAX (string)
+            + RateDescription: PTAX (string)
         + Response (201 CreateResponse)
         + Messages (array [201 ErrorBllMessageDetail])
 
@@ -4045,7 +4045,7 @@ Global (system-wide) Market Data
         + Data 
             + CurrencyId: GBP (string)
             + RateDate: `2021-11` (string)
-            + RateName: PTAX (string)
+            + RateDescription: PTAX (string)
         + Response (200 UpdateResponse)
 
 + Response 400 (application/json; charset=utf-8)
