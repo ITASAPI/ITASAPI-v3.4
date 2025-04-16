@@ -16,6 +16,7 @@ VERSION: 3.4
 
 <ul>
 <li>Physicals Reference Data <b>Code Reference Update</b>: PUT Update Code References,<a href="/#reference/physicals-reference-data/code-reference-update"> Link</a></li>
+<li>Global Market Data <b>Alternate Exchange Rate</b>: PUT Create Aleternate Exchange Rate,<a href="/#reference/global-market-data/alternate-exchange-rate"> Link</a></li>
 </ul>
 
 ## Updated Endpoints
@@ -3973,7 +3974,7 @@ None.
 Global (system-wide) Market Data
 
 ## Alternate Exchange Rate [/MarketData/Global/AlternateExchangeRate/{CurrencyId}]
-`PUT` Create Alternate Exchange Rate.
+`PUT` Remove current rate and Create Alternate Exchange Rate.
 ### Create Alternate Exchange Rate [PUT]
 
 <b>Request Body</b>
@@ -4058,7 +4059,7 @@ Global (system-wide) Market Data
     + Attributes (405 Response)
 
 ## Exchange Rate [/MarketData/Global/ExchangeRate/{CurrencyId}]
-`PUT` Create Exchange Rate.
+`PUT` Remove current rate and Create Exchange Rate.
 ### Create Exchange Rate [PUT]
 
 <b>Request Body</b>
