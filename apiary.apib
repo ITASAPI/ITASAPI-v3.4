@@ -1276,6 +1276,14 @@ Codes relating to Physicals Trading and related endpoints.
 |OldValue|Old Code Value|`string`|30||Required|
 |NewValue|New Code Value|`string`|30||Required|
 
+<hr />
+
+<b>Response Body</b>
+|Property|Description|Type|Max Length|Notes|Constraint|
+|--------|-----------|----|----------|-----|----------|
+|NewValue|New Value|`string`|30|||
+|UpdatedRowCount|Updated Row Count|`number`||||
+
 
 
 + Request (application/json)
@@ -1295,6 +1303,7 @@ Codes relating to Physicals Trading and related endpoints.
     + Attributes 
         + Data
             + NewValue: `CAN||INDIA||GMP||EXP||ABC` (string)
+            + UpdatedRowCount: 21
         + Response (200 UpdateResponse)
     
 + Response 400 (application/json; charset=utf-8)
