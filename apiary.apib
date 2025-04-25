@@ -17,7 +17,7 @@ VERSION: 3.4
 <ul>
 <li>Physicals Reference Data <b>Code Reference Update</b>: PUT Update Code References,<a href="/#reference/physicals-reference-data/code-reference-update"> Link</a></li>
 <li>Global Market Data <b>Alternate Exchange Rate</b>: PUT Create Alternate Exchange Rate,<a href="/#reference/global-market-data/alternate-exchange-rate"> Link</a></li>
-<li>Global Market Data <b>Alternate Exchange Rate Type</b>: GET Alternate Exchange Rate Types,<a href="/#reference/global-market-data/alternate-exchange-rate-type-list"> Link</a></li>
+<li>Global Market Data <b>Exchange Rate Type</b>: GET Exchange Rate Types,<a href="/#reference/global-market-data/exchange-rate-type-list"> Link</a></li>
 </ul>
 
 ## Updated Endpoints
@@ -3992,7 +3992,7 @@ Global (system-wide) Market Data
 |--------|-----------|----|----------|-----|----------|
 |CurrencyId|Currency ID|`string`|3||Required|
 |RateDate|Rate Date|`Date`|||Required|
-|RateDescription|Alternate Exchange Rate Type|`string`|30||Required|
+|RateDescription|Exchange Rate Type|`string`|30||Required|
 |RateType|Rate Type|`string`|1|`D` or `M`|Required|
 |Rate|Rate|`decimal`|||Required|
 |OneMonthPointsMovement|One Month Points Movement|`decimal`||||
@@ -4068,9 +4068,9 @@ Global (system-wide) Market Data
 + Response 405 (application/json; charset=utf-8)
     + Attributes (405 Response)
 
-## Alternate Exchange Rate Type List [/MarketData/{TradingEntityId}/Global/AlternateExchangeRateType/{Property}/{PropertyValue}]
-`GET` List Alternate Exchange Rate Types
-### List Alternate Exchange Rate Types [GET]
+## Exchange Rate Type List [/MarketData/{TradingEntityId}/Global/ExchangeRateType/{Property}/{PropertyValue}]
+`GET` List Exchange Rate Types
+### List Exchange Rate Types [GET]
 
 |Property|Description|Type|Max Length|Notes|Constraint|
 |--------|-----------|----|----------|-----|----------|
@@ -4088,7 +4088,7 @@ Global (system-wide) Market Data
 
 + Response 200 (application/json; charset=utf-8)
     + Attributes 
-        + Data (array [AlternateExchangeRateType])
+        + Data (array [ExchangeRateType])
         + Pagination (Pagination)
         + Response (200 SuccessResponse)
     
@@ -5712,7 +5712,7 @@ The CommodityFullCode is a five part key made up of the following values seperat
 + FourYearPointsMovement: 26 (number)
 + FiveYearPointsMovement: 27 (number)
 
-## AlternateExchangeRateType (object)
+## ExchangeRateType (object)
 + RateTypeName: PTAX (string)
 + RateTypeDescription: Nota Fiscal Brazil Bank Rates (string)
 
